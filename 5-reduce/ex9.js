@@ -1,0 +1,13 @@
+const produtos = [
+    { id: 1, nome: 'Notebook', preco: 3500, estoque: 5, ativo: true },
+    { id: 2, nome: 'Mouse', preco: 80, estoque: 0, ativo: true },
+    { id: 3, nome: 'Teclado', preco: 150, estoque: 10, ativo: false },
+    { id: 4, nome: 'Monitor', preco: 1200, estoque: 3, ativo: true },
+];
+
+const total = produtos.reduce((acc, produto) => {
+    return acc + produto.preco;
+}, 0);
+
+console.log(`Total de valores dos produtos: R$ ${total.toFixed(2)}`);
+console.log('\n'); 
